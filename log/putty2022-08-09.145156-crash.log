@@ -1,0 +1,280 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2022.08.09 14:51:56 =~=~=~=~=~=~=~=~=~=~=~=
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:6988
+load:0x40078000,len:13536
+load:0x40080400,len:3944
+entry 0x40080688
+I (29) boot: ESP-IDF v4.1.2-dirty 2nd stage bootloader
+I (29) boot: compile time 13:49:09
+I (29) boot: chip revision: 3
+I (33) boot_comm: chip revision: 3, min. bootloader chip revision: 0
+I (40) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (49) boot.esp32: SPI Flash Size : 8MB
+I (53) boot: Enabling RNG early entropy source...
+I (59) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (70) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (85) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (92) boot:  3 factory          factory app      00 00 00010000 002d5000
+I (100) boot: End of partition table
+I (104) boot: Defaulting to factory image
+I (109) boot_comm: chip revision: 3, min. application chip revision: 0
+I (116) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x2d07c (184444) map
+I (202) esp_image: segment 1: paddr=0x0003d0a4 vaddr=0x3ffbdb60 size=0x02f74 ( 12148) load
+I (208) esp_image: segment 2: paddr=0x00040020 vaddr=0x400d0020 size=0xd4e04 (871940) map
+I (572) esp_image: segment 3: paddr=0x00114e2c vaddr=0x3ffc0ad4 size=0x00fa0 (  4000) load
+I (574) esp_image: segment 4: paddr=0x00115dd4 vaddr=0x40080000 size=0x00404 (  1028) load
+I (579) esp_image: segment 5: paddr=0x001161e0 vaddr=0x40080404 size=0x1a2c0 (107200) load
+I (654) boot: Loaded app from partition at offset 0x10000
+I (654) boot: Disabling RNG early entropy source...
+I (654) psram: This chip is ESP32-D0WD
+I (660) spiram: Found 64MBit SPI RAM device
+I (664) spiram: SPI RAM mode: flash 40m sram 40m
+I (669) spiram: PSRAM initialized, cache is in low/high (2-core) mode.
+I (676) cpu_start: Pro cpu up.
+I (680) cpu_start: Application information:
+I (685) cpu_start: Project name:     sec_gatts_demo
+I (690) cpu_start: App version:      v1.1.0-184-g72dd288-dirty
+I (697) cpu_start: Compile time:     Aug  9 2022 13:49:15
+I (703) cpu_start: ELF file SHA256:  fecfe94e0f32e9dc...
+I (709) cpu_start: ESP-IDF:          v4.1.2-dirty
+I (714) cpu_start: Starting app cpu, entry point is 0x40081598
+I (0) cpu_start: App cpu up.
+I (1609) spiram: SPI SRAM memory test OK
+I (1611) heap_init: Initializing. RAM available for dynamic allocation:
+I (1611) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (1615) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (1622) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (1628) heap_init: At 3FFBDB5C len 00000004 (0 KiB): DRAM
+I (1634) heap_init: At 3FFC34C0 len 0001CB40 (114 KiB): DRAM
+I (1640) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (1647) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (1653) heap_init: At 4009A6C4 len 0000593C (22 KiB): IRAM
+I (1660) cpu_start: Pro cpu start user code
+I (1664) spiram: Adding pool of 4079K of external SPI memory to heap allocator
+I (1687) spi_flash: detected chip: gd
+I (1687) spi_flash: flash io: dio
+I (1688) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (1695) spiram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (1755) TEST: =================================================
+
+I (1755) TEST: esp-idf=v4.1.2-dirty
+I (1755) TEST:     CONFIG_ESP32_SPIRAM_SUPPORT                        1
+I (1765) TEST:     CONFIG_SPIRAM                                      1
+I (1775) TEST:     CONFIG_SPIRAM_BOOT_INIT                            1
+I (1775) TEST:     CONFIG_SPIRAM_USE_MALLOC                           1
+I (1785) TEST:     CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL                1
+I (1795) TEST:     CONFIG_SPIRAM_MALLOC_RESERVE_INTERNAL              32768
+I (1795) TEST:     CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY        1
+I (1805) TEST:     CONFIG_SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY          (not defined)
+I (1815) TEST:     CONFIG_BT_ALLOCATION_FROM_SPIRAM_FIRST             1
+I (1825) TEST:     CONFIG_BT_BLE_DYNAMIC_ENV_MEMORY                   1
+I (1825) TEST: =================================================
+I (1835) TEST: wifi.cfg, ssid=satayyyyy, pwd=ab000000000000000000000000
+I (1855) wifi:wifi driver task: 3ffce0c0, prio:23, stack:6656, core=0
+I (1855) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (1855) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (1895) wifi:wifi firmware version: 1424aca
+I (1895) wifi:config NVS flash: enabled
+I (1895) wifi:config nano formating: disabled
+I (1895) wifi:Init data frame dynamic rx buffer num: 32
+I (1905) wifi:Init management frame dynamic rx buffer num: 32
+I (1905) wifi:Init management short buffer num: 32
+I (1915) wifi:Init static tx buffer num: 16
+I (1915) wifi:Init static rx buffer size: 1600
+I (1915) wifi:Init static rx buffer num: 10
+I (1925) wifi:Init dynamic rx buffer num: 32
+I (1925) wifi_init: rx ba win: 16
+I (1935) wifi_init: tcpip mbox: 32
+I (1935) wifi_init: udp mbox: 6
+I (1935) wifi_init: tcp mbox: 6
+I (1945) wifi_init: tcp tx win: 5744
+I (1945) wifi_init: tcp rx win: 5744
+I (1955) wifi_init: tcp mss: 1440
+I (1955) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1965) phy_init: phy_version 4660,0162888,Dec 23 2020
+I (2075) wifi:mode : sta (c4:dd:57:5b:ea:e0)
+I (2075) TEST: WiFi connecting, ssid=satayyyyy, pwd=ab000000000000000000000000
+
+I (2075) TEST: (STA) started
+I (2075) TEST: waiting connecting to AP...
+I (2085) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1
+I (2085) wifi:state: init -> auth (b0)
+I (2095) wifi:state: auth -> assoc (0)
+I (2105) wifi:state: assoc -> run (10)
+I (2125) wifi:connected with satayyyyy, aid = 4, channel 8, BW20, bssid = ec:08:6b:79:10:85
+I (2135) wifi:security: WPA2-PSK, phy: bgn, rssi: -19
+I (2135) wifi:pm start, type: 1
+
+I (2145) TEST: (STA) connected, ssid=satayyyyy, channel=8
+I (2215) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (2845) esp_netif_handlers: sta ip: 192.168.19.80, mask: 255.255.255.0, gw: 192.168.19.1
+I (2845) TEST: (STA) IP address: 192.168.19.80
+I (2855) TEST: WiFi connected to AP
+
+I (2855) BTDM_INIT: BT controller compile version [2fcbe89]
+I (2865) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (2875) phy_init: phy_version 4660,0162888,Dec 23 2020
+I (3135) SEC_GATTS_DEMO: app_main init bluetooth
+I (3315) SEC_GATTS_DEMO: The number handle = 8
+I (3345) SEC_GATTS_DEMO: advertising start success
+I (15885) SEC_GATTS_DEMO: ESP_GATTS_CONNECT_EVT
+W (18255) BT_SMP: FOR LE SC LTK IS USED INSTEAD OF STK
+I (18485) SEC_GATTS_DEMO: key type = ESP_LE_KEY_LENC
+I (18495) SEC_GATTS_DEMO: key type = ESP_LE_KEY_PENC
+I (18495) SEC_GATTS_DEMO: key type = ESP_LE_KEY_LID
+I (18675) SEC_GATTS_DEMO: key type = ESP_LE_KEY_PID
+Guru Meditation Error: Core  0 panic'ed (Cache disabled but cached memory region accessed)
+Core 0 register dump:
+PC      : 0x40090db3  PS      : 0x00060634  A0      : 0x800840cd  A1      : 0x3ffbe330  
+A2      : 0xbad00bad  A3      : 0x00000000  A4      : 0x0000a604  A5      : 0x3ffbf608  
+A6      : 0x00000000  A7      : 0x00000000  A8      : 0xbad00bad  A9      : 0x00000001  
+A10     : 0x00000015  A11     : 0x00000000  A12     : 0x0000a604  A13     : 0x3ffbf608  
+A14     : 0x00000000  A15     : 0x3ffb8360  SAR     : 0x0000000b  EXCCAUSE: 0x00000007  
+EXCVADDR: 0x00000000  LBEG    : 0x40091b18  LEND    : 0x40091b34  LCOUNT  : 0x00000000  
+Core 0 was running in ISR context:
+EPC1    : 0x40083f94  EPC2    : 0x00000000  EPC3    : 0x00000000  EPC4    : 0x40090db3
+
+ELF file SHA256: fecfe94e0f32e9dc
+
+Backtrace: 0x40090db0:0x3ffbe330 0x400840ca:0x3ffbe350 0x40086b43:0x3ffbe370 0x400844c1:0x3ffbe390 0x4008e6af:0x3ffbe3b0 0x4008dd37:0x3ffbe3d0 0x4008df55:0x3ffbe3f0 0x4008db42:0x3ffbe430 0x40086c09:0x3ffbe450 0x4008a7ad:0x3ffbe470 0x400875d6:0x3ffbe4b0 0x4008cd6e:0x3ffbe4d0 0x4008d887:0x3ffbe4f0 0x40084e2d:0x3ffbe510 0x4000c053:0x3ffd93b0 0x40008544:0x3ffd93c0 0x40085e49:0x3ffd93e0 0x4009a33e:0x3ffd9400 0x4009a1a1:0x3ffd9440 0x40085aa1:0x3ffd9460 0x40085dd8:0x3ffd94a0 0x40085666:0x3ffd94c0 0x400deead:0x3ffd94e0 0x400df05e:0x3ffd9500 0x400dca56:0x3ffd9520 0x400dd0a5:0x3ffd95a0 0x400dd5d1:0x3ffd9610 0x400dc30e:0x3ffd9630 0x40129a11:0x3ffd9660 0x40102a43:0x3ffd96c0 0x40101bd8:0x3ffd96e0 0x40101c85:0x3ffd9710 0x4010227d:0x3ffd9750 0x4012cfb1:0x3ffd9770 0x4012d093:0x3ffd97a0 0x4012d396:0x3ffd97d0 0x401284eb:0x3ffd9870 0x4012a915:0x3ffd9890 0x40093b59:0x3ffd98b0
+
+Re-enable cpu cache.
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0x3 (SW_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:4
+load:0x3fff0034,len:6988
+load:0x40078000,len:13536
+load:0x40080400,len:3944
+entry 0x40080688
+I (28) boot: ESP-IDF v4.1.2-dirty 2nd stage bootloader
+I (29) boot: compile time 13:49:09
+I (29) boot: chip revision: 3
+I (32) boot_comm: chip revision: 3, min. bootloader chip revision: 0
+I (39) boot.esp32: SPI Speed      : 40MHz
+I (44) boot.esp32: SPI Mode       : DIO
+I (48) boot.esp32: SPI Flash Size : 8MB
+I (53) boot: Enabling RNG early entropy source...
+I (58) boot: Partition Table:
+I (62) boot: ## Label            Usage          Type ST Offset   Length
+I (69) boot:  0 nvs              WiFi data        01 02 00009000 00004000
+I (77) boot:  1 otadata          OTA data         01 00 0000d000 00002000
+I (84) boot:  2 phy_init         RF data          01 01 0000f000 00001000
+I (92) boot:  3 factory          factory app      00 00 00010000 002d5000
+I (99) boot: End of partition table
+I (103) boot: Defaulting to factory image
+I (108) boot_comm: chip revision: 3, min. application chip revision: 0
+I (115) esp_image: segment 0: paddr=0x00010020 vaddr=0x3f400020 size=0x2d07c (184444) map
+I (201) esp_image: segment 1: paddr=0x0003d0a4 vaddr=0x3ffbdb60 size=0x02f74 ( 12148) load
+I (207) esp_image: segment 2: paddr=0x00040020 vaddr=0x400d0020 size=0xd4e04 (871940) map
+I (571) esp_image: segment 3: paddr=0x00114e2c vaddr=0x3ffc0ad4 size=0x00fa0 (  4000) load
+I (574) esp_image: segment 4: paddr=0x00115dd4 vaddr=0x40080000 size=0x00404 (  1028) load
+I (579) esp_image: segment 5: paddr=0x001161e0 vaddr=0x40080404 size=0x1a2c0 (107200) load
+I (653) boot: Loaded app from partition at offset 0x10000
+I (653) boot: Disabling RNG early entropy source...
+I (654) psram: This chip is ESP32-D0WD
+I (659) spiram: Found 64MBit SPI RAM device
+I (663) spiram: SPI RAM mode: flash 40m sram 40m
+I (668) spiram: PSRAM initialized, cache is in low/high (2-core) mode.
+I (675) cpu_start: Pro cpu up.
+I (679) cpu_start: Application information:
+I (684) cpu_start: Project name:     sec_gatts_demo
+I (690) cpu_start: App version:      v1.1.0-184-g72dd288-dirty
+I (696) cpu_start: Compile time:     Aug  9 2022 13:49:15
+I (702) cpu_start: ELF file SHA256:  fecfe94e0f32e9dc...
+I (708) cpu_start: ESP-IDF:          v4.1.2-dirty
+I (714) cpu_start: Starting app cpu, entry point is 0x40081598
+I (0) cpu_start: App cpu up.
+I (1608) spiram: SPI SRAM memory test OK
+I (1610) heap_init: Initializing. RAM available for dynamic allocation:
+I (1610) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM
+I (1615) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM
+I (1621) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM
+I (1627) heap_init: At 3FFBDB5C len 00000004 (0 KiB): DRAM
+I (1633) heap_init: At 3FFC34C0 len 0001CB40 (114 KiB): DRAM
+I (1640) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (1646) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (1653) heap_init: At 4009A6C4 len 0000593C (22 KiB): IRAM
+I (1659) cpu_start: Pro cpu start user code
+I (1664) spiram: Adding pool of 4079K of external SPI memory to heap allocator
+I (1686) spi_flash: detected chip: gd
+I (1687) spi_flash: flash io: dio
+I (1687) cpu_start: Starting scheduler on PRO CPU.
+I (0) cpu_start: Starting scheduler on APP CPU.
+I (1695) spiram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (1755) TEST: =================================================
+
+I (1755) TEST: esp-idf=v4.1.2-dirty
+I (1755) TEST:     CONFIG_ESP32_SPIRAM_SUPPORT                        1
+I (1765) TEST:     CONFIG_SPIRAM                                      1
+I (1775) TEST:     CONFIG_SPIRAM_BOOT_INIT                            1
+I (1775) TEST:     CONFIG_SPIRAM_USE_MALLOC                           1
+I (1785) TEST:     CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL                1
+I (1795) TEST:     CONFIG_SPIRAM_MALLOC_RESERVE_INTERNAL              32768
+I (1795) TEST:     CONFIG_SPIRAM_ALLOW_BSS_SEG_EXTERNAL_MEMORY        1
+I (1805) TEST:     CONFIG_SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY          (not defined)
+I (1815) TEST:     CONFIG_BT_ALLOCATION_FROM_SPIRAM_FIRST             1
+I (1825) TEST:     CONFIG_BT_BLE_DYNAMIC_ENV_MEMORY                   1
+I (1825) TEST: =================================================
+I (1835) TEST: wifi.cfg, ssid=satayyyyy, pwd=ab000000000000000000000000
+I (1855) wifi:wifi driver task: 3ffb9be4, prio:23, stack:6656, core=0
+I (1855) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (1855) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (1895) wifi:wifi firmware version: 1424aca
+I (1895) wifi:config NVS flash: enabled
+I (1895) wifi:config nano formating: disabled
+I (1895) wifi:Init data frame dynamic rx buffer num: 32
+I (1905) wifi:Init management frame dynamic rx buffer num: 32
+I (1905) wifi:Init management short buffer num: 32
+I (1915) wifi:Init static tx buffer num: 16
+I (1915) wifi:Init static rx buffer size: 1600
+I (1915) wifi:Init static rx buffer num: 10
+I (1925) wifi:Init dynamic rx buffer num: 32
+I (1925) wifi_init: rx ba win: 16
+I (1935) wifi_init: tcpip mbox: 32
+I (1935) wifi_init: udp mbox: 6
+I (1935) wifi_init: tcp mbox: 6
+I (1945) wifi_init: tcp tx win: 5744
+I (1945) wifi_init: tcp rx win: 5744
+I (1955) wifi_init: tcp mss: 1440
+I (1955) wifi_init: WiFi/LWIP prefer SPIRAM
+I (1965) phy_init: phy_version 4660,0162888,Dec 23 2020
+I (2075) wifi:mode : sta (c4:dd:57:5b:ea:e0)
+I (2075) TEST: WiFi connecting, ssid=satayyyyy, pwd=ab000000000000000000000000
+
+I (2075) TEST: (STA) started
+I (2075) TEST: waiting connecting to AP...
+I (2085) wifi:new:<8,0>, old:<1,0>, ap:<255,255>, sta:<8,0>, prof:1
+I (2085) wifi:state: init -> auth (b0)
+I (2095) wifi:state: auth -> assoc (0)
+I (2105) wifi:state: assoc -> run (10)
+I (2135) wifi:connected with satayyyyy, aid = 4, channel 8, BW20, bssid = ec:08:6b:79:10:85
+I (2135) wifi:security: WPA2-PSK, phy: bgn, rssi: -18
+I (2135) wifi:pm start, type: 1
+
+I (2145) TEST: (STA) connected, ssid=satayyyyy, channel=8
+I (2155) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (3345) esp_netif_handlers: sta ip: 192.168.19.80, mask: 255.255.255.0, gw: 192.168.19.1
+I (3345) TEST: (STA) IP address: 192.168.19.80
+I (3345) TEST: WiFi connected to AP
+
+I (3355) BTDM_INIT: BT controller compile version [2fcbe89]
+I (3365) system_api: Base MAC address is not set, read default base MAC address from BLK0 of EFUSE
+I (3375) phy_init: phy_version 4660,0162888,Dec 23 2020
+I (3635) SEC_GATTS_DEMO: app_main init bluetooth
+I (3805) SEC_GATTS_DEMO: The number handle = 8
+I (3845) SEC_GATTS_DEMO: advertising start success

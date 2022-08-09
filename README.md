@@ -23,7 +23,8 @@ NOTE: a newline should exist at the end of the file. This is the Wi-Fi config to
 If Wi-Fi is able to connect to AP, log is seen.  
 `I (2843) TEST: (STA) IP address: 192.168.43.29`  
 If Wi-Fi fails to connect, disconnected log is seen.  
-`E (2103) TEST: Failed to connect to AP`
+`E (2103) TEST: Failed to connect to AP`  
+Wi-Fi is stopped in case of disconnection.
 5. Use Android nRFConnect App to scan/connect to the ROM.  When BLE is pairing, nRFConnect prompts to confirm.  After confirmation, the ROM is very easy to crash if **Wi-Fi is connected**.  
 ```
 I (2855) BTDM_INIT: BT controller compile version [2fcbe89]
@@ -53,3 +54,6 @@ ELF file SHA256: fecfe94e0f32e9dc
 
 Backtrace: 0x40090db0:0x3ffbe330 0x400840ca:0x3ffbe350 0x40086b43:0x3ffbe370 0x400844c1:0x3ffbe390 0x4008e6af:0x3ffbe3b0 0x4008dd37:0x3ffbe3d0 0x4008df55:0x3ffbe3f0 0x4008db42:0x3ffbe430 0x40086c09:0x3ffbe450 0x4008a7ad:0x3ffbe470 0x400875d6:0x3ffbe4b0 0x4008cd6e:0x3ffbe4d0 0x4008d887:0x3ffbe4f0 0x40084e2d:0x3ffbe510 0x4000c053:0x3ffd93b0 0x40008544:0x3ffd93c0 0x40085e49:0x3ffd93e0 0x4009a33e:0x3ffd9400 0x4009a1a1:0x3ffd9440 0x40085aa1:0x3ffd9460 0x40085dd8:0x3ffd94a0 0x40085666:0x3ffd94c0 0x400deead:0x3ffd94e0 0x400df05e:0x3ffd9500 0x400dca56:0x3ffd9520 0x400dd0a5:0x3ffd95a0 0x400dd5d1:0x3ffd9610 0x400dc30e:0x3ffd9630 0x40129a11:0x3ffd9660 0x40102a43:0x3ffd96c0 0x40101bd8:0x3ffd96e0 0x40101c85:0x3ffd9710 0x4010227d:0x3ffd9750 0x4012cfb1:0x3ffd9770 0x4012d093:0x3ffd97a0 0x4012d396:0x3ffd97d0 0x401284eb:0x3ffd9870 0x4012a915:0x3ffd9890 0x40093b59:0x3ffd98b0
 ```
+6. When Wi-Fi is stopped, no crash is seen after the patch is applied.  It seems the crash is caused by Wi-Fi components.
+
+
